@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Créditos y atribuciones de los recursos multimedia utilizados en el portfolio de MiArma">
+    <title>Créditos y Licencias | MiArma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Additional styles for credits page */
+        .credits-page {
+            min-height: 100vh;
+            padding-top: 120px;
+        }
+
+        .credits-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .credits-section {
+            margin-bottom: 3rem;
+        }
+
+        .credits-section h2 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .credits-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+
+        .credits-table th,
+        .credits-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .credits-table th {
+            background: rgba(0, 245, 255, 0.1);
+            font-family: var(--font-display);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-primary);
+        }
+
+        .credits-table td {
+            color: var(--color-text-muted);
+        }
+
+        .credits-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .credits-table a {
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .credits-table a:hover {
+            text-decoration: underline;
+        }
+
+        .license-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: rgba(191, 0, 255, 0.2);
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: var(--color-secondary);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            margin-bottom: 2rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--color-primary);
+        }
+
+        .back-link svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .license-info {
+            padding: 1.5rem;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            margin-top: 1rem;
+        }
+
+        .license-info h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .license-info p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .credits-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header scrolled">
+        <nav class="nav">
+            <a href="index.html" class="logo" aria-label="MiArma - Inicio">
+                <svg class="logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="23" stroke="url(#logoGradient)" stroke-width="2" />
+                    <path d="M25 8L32 20H18L25 8Z" fill="url(#logoGradient)" />
+                    <circle cx="25" cy="30" r="8" stroke="url(#logoGradient)" stroke-width="2" />
+                    <circle cx="25" cy="30" r="3" fill="url(#logoGradient)" />
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00f5ff" />
+                            <stop offset="50%" style="stop-color:#bf00ff" />
+                            <stop offset="100%" style="stop-color:#ff006e" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">MiArma</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Volver al Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="credits-page">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Volver al Portfolio
+            </a>
+
+            <div class="credits-header">
+                <span class="section-tag">Atribuciones</span>
+                <h1 class="section-title">Créditos y <span class="gradient-text">Licencias</span></h1>
+                <p class="section-description">Reconocimiento a los autores de los recursos multimedia utilizados</p>
+            </div>
+
+            <!-- Imágenes -->
+            <section class="credits-section">
+                <h2>🖼️ Imágenes</h2>
+                <table class="credits-table">
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>Autor</th>
+                            <th>Fuente</th>
+                            <th>Licencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Hero Image - Paisaje Alienígena</td>
+                            <td>Generado con IA (Demo)</td>
+                            <td>Creación propia para demostración</td>
+                            <td><span class="license-badge">Demo</span></td>
+                        </tr>
+                        <tr>
+                            <td>Galería 1 - Ciudad Celestial</td>
+                            <td>Generado con IA (Demo)</td>
+                            <td>Creación propia para demostración</td>
+                            <td><span class="license-badge">Demo</span></td>
+                        </tr>
+                        <tr>
+                            <td>Galería 2 - Estación Orbital</td>
+                            <td>Generado con IA (Demo)</td>
+                            <td>Creación propia para demostración</td>
+                            <td><span class="license-badge">Demo</span></td>
+                        </tr>
+                        <tr>
+                            <td>Galería 3 - Neón Nocturno</td>
+                            <td>Generado con IA (Demo)</td>
+                            <td>Creación propia para demostración</td>
+                            <td><span class="license-badge">Demo</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="license-info">
+                    <h3>📝 Nota sobre las imágenes</h3>
+                    <p>Las imágenes actuales son demostraciones generadas por IA. Para producción, se recomienda
+                        reemplazarlas por imágenes de fuentes como <a href="https://www.pexels.com"
+                            target="_blank">Pexels</a>, <a href="https://pixabay.com" target="_blank">Pixabay</a> o <a
+                            href="https://unsplash.com" target="_blank">Unsplash</a>, que ofrecen contenido bajo
+                        licencias Creative Commons o similares.</p>
+                </div>
+            </section>
+
+            <!-- Vídeo -->
+            <section class="credits-section">
+                <h2>🎬 Vídeo</h2>
+                <table class="credits-table">
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>Autor</th>
+                            <th>Fuente</th>
+                            <th>Licencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Video Reel - Animación Espacial</td>
+                            <td>Por añadir</td>
+                            <td><a href="https://www.pexels.com/videos/" target="_blank">Pexels Videos</a></td>
+                            <td><span class="license-badge">Pexels License</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="license-info">
+                    <h3>📝 Recomendación de fuentes para vídeo</h3>
+                    <p>Se recomienda buscar vídeos en <a href="https://www.pexels.com/videos/search/space/"
+                            target="_blank">Pexels (sección Space)</a> o <a
+                            href="https://pixabay.com/videos/search/space/" target="_blank">Pixabay Videos</a>. Ambas
+                        plataformas ofrecen contenido libre de derechos para uso comercial y personal.</p>
+                </div>
+            </section>
+
+            <!-- Audio -->
+            <section class="credits-section">
+                <h2>🎵 Audio</h2>
+                <table class="credits-table">
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>Autor</th>
+                            <th>Fuente</th>
+                            <th>Licencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Música Ambiental Espacial</td>
+                            <td>Por añadir</td>
+                            <td><a href="https://freepd.com" target="_blank">FreePD.com</a></td>
+                            <td><span class="license-badge">CC0 1.0</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="license-info">
+                    <h3>📝 Recomendación de fuentes para audio</h3>
+                    <p>Para música ambiental bajo licencia CC0 (dominio público), se recomienda <a
+                            href="https://freepd.com" target="_blank">FreePD.com</a> o <a
+                            href="https://mixkit.co/free-stock-music/" target="_blank">Mixkit</a>. Estos recursos se
+                        pueden usar sin atribución.</p>
+                </div>
+            </section>
+
+            <!-- Tipografías -->
+            <section class="credits-section">
+                <h2>🔤 Tipografías</h2>
+                <table class="credits-table">
+                    <thead>
+                        <tr>
+                            <th>Fuente</th>
+                            <th>Diseñador</th>
+                            <th>Enlace</th>
+                            <th>Licencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Orbitron</td>
+                            <td>Matt McInerney</td>
+                            <td><a href="https://fonts.google.com/specimen/Orbitron" target="_blank">Google Fonts</a>
+                            </td>
+                            <td><span class="license-badge">OFL 1.1</span></td>
+                        </tr>
+                        <tr>
+                            <td>Inter</td>
+                            <td>Rasmus Andersson</td>
+                            <td><a href="https://fonts.google.com/specimen/Inter" target="_blank">Google Fonts</a></td>
+                            <td><span class="license-badge">OFL 1.1</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Iconos -->
+            <section class="credits-section">
+                <h2>✨ Iconos</h2>
+                <table class="credits-table">
+                    <thead>
+                        <tr>
+                            <th>Recurso</th>
+                            <th>Fuente</th>
+                            <th>Licencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Iconos SVG (inline)</td>
+                            <td>Diseño personalizado / Inspirados en Feather Icons</td>
+                            <td><span class="license-badge">MIT</span></td>
+                        </tr>
+                        <tr>
+                            <td>Iconos de redes sociales</td>
+                            <td>Simple Icons</td>
+                            <td><span class="license-badge">CC0 1.0</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Licencia del proyecto -->
+            <section class="credits-section">
+                <h2>📜 Licencia de Este Proyecto</h2>
+                <div class="license-info">
+                    <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">
+                        <img src="https://licensebuttons.net/l/by-nc/4.0/88x31.png"
+                            alt="Licencia Creative Commons BY-NC 4.0" style="margin-bottom: 1rem;">
+                    </a>
+                    <h3>Creative Commons Atribución-NoComercial 4.0 Internacional (CC BY-NC 4.0)</h3>
+                    <p>Esta landing page (código HTML, CSS, JavaScript y diseño) está licenciada bajo <a
+                            href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>.</p>
+                    <p style="margin-top: 1rem;"><strong>Esto significa que puedes:</strong></p>
+                    <ul style="color: var(--color-text-muted); margin: 0.5rem 0 1rem 1.5rem;">
+                        <li>Compartir — copiar y redistribuir el material</li>
+                        <li>Adaptar — remezclar, transformar y construir a partir del material</li>
+                    </ul>
+                    <p><strong>Bajo las siguientes condiciones:</strong></p>
+                    <ul style="color: var(--color-text-muted); margin: 0.5rem 0 0 1.5rem;">
+                        <li><strong>Atribución</strong> — Debes dar crédito apropiado</li>
+                        <li><strong>NoComercial</strong> — No puedes usar el material para fines comerciales</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 3rem;">
+        <div class="container">
+            <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+                <p class="copyright">&copy; 2024 MiArma. Todos los derechos reservados.</p>
+                <p style="margin-top: 0.5rem;">
+                    <a href="index.html" style="color: var(--color-primary);">← Volver al Portfolio</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

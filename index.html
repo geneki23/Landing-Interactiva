@@ -91,132 +91,165 @@
         <section class="gallery" id="galeria">
             <div class="container">
                 <div class="section-header">
-                    </button>
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Galería de <span class="gradient-text">Trabajos</span></h2>
+                    <p class="section-description">Una selección de mis paisajes digitales más recientes</p>
                 </div>
-            </div>
-            </div>
-        </section>
-
-        <!-- Reel Section -->
-        <section class="reel" id="reel">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Showreel</span>
-                    <h2 class="section-title">Mi Proceso <span class="gradient-text">Creativo</span></h2>
-                    <p class="section-description">Descubre cómo cobran vida mis mundos digitales</p>
-                </div>
-                <div class="reel-container">
-                    <div class="reel-preview">
-                        <img src="assets/images/hero.png" alt="Preview del video reel" class="reel-preview-img">
-                        <button class="reel-play-btn" id="openVideoModal" aria-label="Reproducir video reel">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z" />
-                            </svg>
-                            <span class="play-text">Ver Reel</span>
+                <div class="gallery-container">
+                    <div class="gallery-main">
+                        <img src="assets/images/gallery-1.png"
+                            alt="Paisaje alienígena con cristales bioluminiscentes y dos lunas" id="galleryMainImage"
+                            class="gallery-main-img">
+                        <div class="gallery-main-overlay">
+                            <h3 class="gallery-main-title" id="galleryMainTitle">Cristales de Titán</h3>
+                            <p class="gallery-main-desc" id="galleryMainDesc">Un mundo alienígena donde cristales
+                                bioluminiscentes emergen del suelo rocoso,
+                                iluminando la noche bajo dos lunas gemelas.</p>
+                        </div>
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <button class="thumbnail active" data-full="assets/images/gallery-1.png"
+                            data-title="Cristales de Titán"
+                            data-desc="Un mundo alienígena donde cristales bioluminiscentes emergen del suelo rocoso, iluminando la noche bajo dos lunas gemelas."
+                            aria-label="Ver Cristales de Titán">
+                            <img src="assets/images/gallery-1.png" alt="Miniatura - Paisaje alienígena con cristales">
+                        </button>
+                        <button class="thumbnail" data-full="assets/images/gallery-2.png"
+                            data-title="Centinela del Vacío"
+                            data-desc="Una estación espacial solitaria orbita un gigante gaseoso de tonos azulados, vigilando las profundidades del cosmos."
+                            aria-label="Ver Centinela del Vacío">
+                            <img src="assets/images/gallery-2.png" alt="Miniatura - Estación orbital y planeta gaseoso">
+                        </button>
+                        <button class="thumbnail" data-full="assets/images/gallery-3.png" data-title="Neón Nocturno"
+                            data-desc="Las calles de una metrópolis cyberpunk resplandecen con luces de neón en tonos rosa y azul, creando un ambiente futurista y melancólico."
+                            aria-label="Ver Neón Nocturno">
+                            <img src="assets/images/gallery-3.png" alt="Miniatura - Ciudad cyberpunk con neón">
                         </button>
                     </div>
                 </div>
-                <!-- Audio Ambient -->
-                <div class="ambient-audio">
-                    <h3 class="audio-title">🎧 Ambiente Espacial</h3>
-                    <p class="audio-description">Música ambiental para acompañar tu exploración</p>
-                    <audio controls id="ambientAudio" class="audio-player">
-                        <source src="assets/audio/ambient.mp3" type="audio/mpeg">
-                        Tu navegador no soporta el elemento de audio.
-                    </audio>
-                </div>
             </div>
-        </section>
 
-        <!-- Contacto Section -->
-        <section class="contact" id="contacto">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Contacto</span>
-                    <h2 class="section-title">¿Listo para crear <span class="gradient-text">algo increíble</span>?</h2>
-                    <p class="section-description">Estoy disponible para proyectos freelance y colaboraciones</p>
+            <!-- Reel Section -->
+            <section class="reel" id="reel">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">Showreel</span>
+                        <h2 class="section-title">Mi Proceso <span class="gradient-text">Creativo</span></h2>
+                        <p class="section-description">Descubre cómo cobran vida mis mundos digitales</p>
+                    </div>
+                    <div class="reel-container">
+                        <div class="reel-preview">
+                            <img src="assets/images/hero.png" alt="Preview del video reel" class="reel-preview-img">
+                            <button class="reel-play-btn" id="openVideoModal" aria-label="Reproducir video reel">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span class="play-text">Ver Reel</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Audio Ambient -->
+                    <div class="ambient-audio">
+                        <h3 class="audio-title">🎧 Ambiente Espacial</h3>
+                        <p class="audio-description">Música ambiental para acompañar tu exploración</p>
+                        <audio controls id="ambientAudio" class="audio-player">
+                            <source src="assets/audio/ambient.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
                 </div>
-                <div class="contact-content">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name" class="form-label">Nombre</label>
-                            <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" name="email" class="form-input" placeholder="tu@email.com"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Mensaje</label>
-                            <textarea id="message" name="message" class="form-input form-textarea"
-                                placeholder="Cuéntame sobre tu proyecto..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">
-                            <span>Enviar Mensaje</span>
-                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
-                            </svg>
-                        </button>
-                    </form>
-                    <div class="contact-info">
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                    <polyline points="22,6 12,13 2,6" />
-                                </svg>
+            </section>
+
+            <!-- Contacto Section -->
+            <section class="contact" id="contacto">
+                <div class="container">
+                    <div class="section-header">
+                        <span class="section-tag">Contacto</span>
+                        <h2 class="section-title">¿Listo para crear <span class="gradient-text">algo increíble</span>?
+                        </h2>
+                        <p class="section-description">Estoy disponible para proyectos freelance y colaboraciones</p>
+                    </div>
+                    <div class="contact-content">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre"
+                                    required>
                             </div>
-                            <div>
-                                <h4>Email</h4>
-                                <p>hola@miarma.art</p>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="tu@email.com" required>
                             </div>
-                        </div>
-                        <div class="contact-card">
-                            <div class="contact-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea id="message" name="message" class="form-input form-textarea"
+                                    placeholder="Cuéntame sobre tu proyecto..." required></textarea>
                             </div>
-                            <div>
-                                <h4>Ubicación</h4>
-                                <p>Madrid, España</p>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span>Enviar Mensaje</span>
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contact-info">
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>hola@miarma.art</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link" aria-label="Instagram">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Twitter">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="ArtStation">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24-3.132a2.387 2.387 0 0 0-.376-1.302L15.274 0H9.177l9.474 16.381 3.924-.002a2.424 2.424 0 0 0 1.425-.906zm-9.126 1.402L9.2 5.862l-5.674 9.815 2.792 4.838h11.348l-2.792-4.522z" />
-                                </svg>
-                            </a>
-                            <a href="#" class="social-link" aria-label="Behance">
-                                <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path
-                                        d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.348-1.05.6-1.67.767-.61.165-1.252.254-1.91.254H0V4.51h6.938v-.007zM6.545 9.8c.624 0 1.14-.15 1.545-.45.406-.3.6-.79.6-1.46 0-.36-.06-.66-.19-.89-.13-.24-.3-.43-.54-.57-.24-.14-.5-.24-.82-.3-.32-.06-.65-.09-1-.09H3.38v3.76h3.166zm.2 5.75c.38 0 .73-.04 1.05-.13.32-.09.6-.22.84-.4.23-.17.42-.39.55-.67.13-.27.2-.6.2-.97 0-.76-.22-1.32-.66-1.66-.44-.34-1.04-.51-1.8-.51H3.38v4.33h3.36v.01zM15.4 4.504h6.16v1.56h-6.16zM21.753 14.22c.234.644.356 1.386.356 2.197 0 .87-.122 1.636-.356 2.302-.236.666-.566 1.222-.992 1.666-.425.448-.937.79-1.534 1.024-.595.236-1.25.352-1.97.352-.72 0-1.38-.116-1.98-.352-.6-.235-1.114-.576-1.538-1.024-.426-.444-.76-1-.996-1.666-.238-.666-.356-1.435-.356-2.302 0-.81.118-1.553.356-2.197.236-.644.57-1.2.995-1.664.425-.468.938-.83 1.54-1.088.6-.258 1.262-.386 1.98-.386.717 0 1.377.128 1.97.386.6.258 1.11.62 1.535 1.088.424.463.755 1.02.99 1.664zm-2.286 3.61c.098-.287.148-.633.148-1.03 0-.397-.05-.744-.148-1.04-.1-.296-.236-.546-.41-.746-.176-.2-.384-.35-.628-.458-.244-.105-.508-.157-.796-.157-.29 0-.554.052-.794.157-.248.107-.46.258-.64.458-.18.2-.318.45-.418.746-.1.296-.15.643-.15 1.04 0 .397.05.743.15 1.03.1.286.238.536.417.745.182.207.393.366.64.477.242.11.507.167.795.167.288 0 .552-.057.796-.167.244-.11.452-.27.628-.477.174-.21.31-.46.41-.745z" />
-                                </svg>
-                            </a>
+                            <div class="contact-card">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Ubicación</h4>
+                                    <p>Madrid, España</p>
+                                </div>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Twitter">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link" aria-label="ArtStation">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M0 17.723l2.027 3.505h.001a2.424 2.424 0 0 0 2.164 1.333h13.457l-2.792-4.838H0zm24-3.132a2.387 2.387 0 0 0-.376-1.302L15.274 0H9.177l9.474 16.381 3.924-.002a2.424 2.424 0 0 0 1.425-.906zm-9.126 1.402L9.2 5.862l-5.674 9.815 2.792 4.838h11.348l-2.792-4.522z" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Behance">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path
+                                            d="M6.938 4.503c.702 0 1.34.06 1.92.188.577.13 1.07.33 1.485.61.41.28.733.65.96 1.12.225.47.34 1.05.34 1.73 0 .74-.17 1.36-.507 1.86-.338.5-.837.9-1.502 1.22.906.26 1.576.72 2.022 1.37.448.66.665 1.45.665 2.36 0 .75-.13 1.39-.41 1.93-.28.55-.67 1-1.16 1.35-.48.348-1.05.6-1.67.767-.61.165-1.252.254-1.91.254H0V4.51h6.938v-.007zM6.545 9.8c.624 0 1.14-.15 1.545-.45.406-.3.6-.79.6-1.46 0-.36-.06-.66-.19-.89-.13-.24-.3-.43-.54-.57-.24-.14-.5-.24-.82-.3-.32-.06-.65-.09-1-.09H3.38v3.76h3.166zm.2 5.75c.38 0 .73-.04 1.05-.13.32-.09.6-.22.84-.4.23-.17.42-.39.55-.67.13-.27.2-.6.2-.97 0-.76-.22-1.32-.66-1.66-.44-.34-1.04-.51-1.8-.51H3.38v4.33h3.36v.01zM15.4 4.504h6.16v1.56h-6.16zM21.753 14.22c.234.644.356 1.386.356 2.197 0 .87-.122 1.636-.356 2.302-.236.666-.566 1.222-.992 1.666-.425.448-.937.79-1.534 1.024-.595.236-1.25.352-1.97.352-.72 0-1.38-.116-1.98-.352-.6-.235-1.114-.576-1.538-1.024-.426-.444-.76-1-.996-1.666-.238-.666-.356-1.435-.356-2.302 0-.81.118-1.553.356-2.197.236-.644.57-1.2.995-1.664.425-.468.938-.83 1.54-1.088.6-.258 1.262-.386 1.98-.386.717 0 1.377.128 1.97.386.6.258 1.11.62 1.535 1.088.424.463.755 1.02.99 1.664zm-2.286 3.61c.098-.287.148-.633.148-1.03 0-.397-.05-.744-.148-1.04-.1-.296-.236-.546-.41-.746-.176-.2-.384-.35-.628-.458-.244-.105-.508-.157-.796-.157-.29 0-.554.052-.794.157-.248.107-.46.258-.64.458-.18.2-.318.45-.418.746-.1.296-.15.643-.15 1.04 0 .397.05.743.15 1.03.1.286.238.536.417.745.182.207.393.366.64.477.242.11.507.167.795.167.288 0 .552-.057.796-.167.244-.11.452-.27.628-.477.174-.21.31-.46.41-.745z" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
     </main>
 
     <!-- Footer -->

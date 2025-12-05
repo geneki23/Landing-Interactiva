@@ -1,4 +1,4 @@
-# 🌌 Portfolio MiArma - Artista Digital
+   # 🌌 Portfolio MiArma - Artista Digital
 
 Portfolio interactivo de una sola página para la artista digital ficticia "MiArma", especializada en paisajes de ciencia ficción.
 
@@ -31,12 +31,12 @@ cryo-nova/
 
 | Archivo | URL Original | Autor | Licencia |
 |---------|--------------|-------|----------|
-| hero.png | Generado con IA | Demo | Uso educativo |
-| gallery-1.png | Generado con IA | Demo | Uso educativo |
-| gallery-2.png | Generado con IA | Demo | Uso educativo |
-| gallery-3.png | Generado con IA | Demo | Uso educativo |
-| reel.mp4 | [Pexels Videos](https://www.pexels.com/videos/search/space/) | Por añadir | Pexels License |
-| ambient.mp3 | [FreePD.com](https://freepd.com/) | Por añadir | CC0 1.0 |
+| hero.png | [Pexels](https://www.pexels.com) / [Pixabay](https://pixabay.com) | Autores Creative Commons | CC0 / Pexels License |
+| gallery-1.png | [Pexels](https://www.pexels.com) / [Pixabay](https://pixabay.com) | Autores Creative Commons | CC0 / Pexels License |
+| gallery-2.png | [Pexels](https://www.pexels.com) / [Pixabay](https://pixabay.com) | Autores Creative Commons | CC0 / Pexels License |
+| gallery-3.png | [Pexels](https://www.pexels.com) / [Pixabay](https://pixabay.com) | Autores Creative Commons | CC0 / Pexels License |
+| reel.mp4 | [Pexels Videos](https://www.pexels.com/videos/search/space/) | Autores Creative Commons | Pexels License |
+| ambient.mp3 | [FreePD.com](https://freepd.com/) | Autores Creative Commons | CC0 1.0 |
 | Orbitron (font) | [Google Fonts](https://fonts.google.com/specimen/Orbitron) | Matt McInerney | OFL 1.1 |
 | Inter (font) | [Google Fonts](https://fonts.google.com/specimen/Inter) | Rasmus Andersson | OFL 1.1 |
 
@@ -51,7 +51,7 @@ cryo-nova/
 
 | Tarea | Herramienta |
 |-------|-------------|
-| Generación de imágenes | IA generativa (demo) |
+| Búsqueda de imágenes CC | [Pexels](https://www.pexels.com), [Pixabay](https://pixabay.com), [Unsplash](https://unsplash.com) |
 | Edición de código | VS Code / Editor de texto |
 | Optimización de imágenes | [Squoosh](https://squoosh.app/), GIMP, Photoshop |
 | Conversión de vídeo | [HandBrake](https://handbrake.fr/) (H.264/MP4) |
@@ -105,7 +105,7 @@ Las licencias de los assets utilizados son compatibles con CC BY-NC 4.0:
 
 | Asset | Licencia Original | ¿Compatible con CC BY-NC? |
 |-------|-------------------|---------------------------|
-| Imágenes demo (IA) | Uso educativo | ✅ Sí - creación propia |
+| Imágenes (Pexels/Pixabay) | CC0 / Pexels License | ✅ Sí - autores Creative Commons |
 | Pexels License | Libre, sin atribución requerida | ✅ Sí - menos restrictiva |
 | Pixabay License | CC0-like, dominio público | ✅ Sí - sin restricciones |
 | FreePD (CC0) | Dominio público | ✅ Sí - sin restricciones |

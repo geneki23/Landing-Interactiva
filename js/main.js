@@ -1,7 +1,3 @@
-/**
- * MiArma Portfolio - JavaScript Interactivity
- * Handles gallery, video modal, navigation, and scroll effects
- */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all components
@@ -21,14 +17,14 @@ function initNavigation() {
     const header = document.getElementById('header');
     const navLinkItems = document.querySelectorAll('.nav-link');
 
-    // Mobile menu toggle
+
     if (navToggle && navLinks) {
         navToggle.addEventListener('click', () => {
             navToggle.classList.toggle('active');
             navLinks.classList.toggle('active');
         });
 
-        // Close menu when clicking a link
+        // Cerrar el menu cuando se hace clic en un enlace
         navLinkItems.forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
@@ -36,7 +32,7 @@ function initNavigation() {
             });
         });
 
-        // Close menu when clicking outside
+        // Cerrar el menu cuando se hace clic fuera
         document.addEventListener('click', (e) => {
             if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
                 navToggle.classList.remove('active');
@@ -45,7 +41,7 @@ function initNavigation() {
         });
     }
 
-    // Header scroll effect
+    // Efecto de scroll en el header
     if (header) {
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
@@ -56,7 +52,7 @@ function initNavigation() {
         });
     }
 
-    // Smooth scroll for anchor links
+    // Scroll suave para enlaces de anclaje
     navLinkItems.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
@@ -76,9 +72,9 @@ function initNavigation() {
     });
 }
 
-/* ============================================
-   Gallery
-   ============================================ */
+// ============================================
+// Gallery
+// ============================================
 function initGallery() {
     const thumbnails = document.querySelectorAll('.thumbnail');
     const mainImage = document.getElementById('galleryMainImage');
@@ -89,38 +85,38 @@ function initGallery() {
 
     thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', () => {
-            // Remove active class from all thumbnails
+            // Remover la clase 'active' de todos los thumbnails
             thumbnails.forEach(t => t.classList.remove('active'));
 
-            // Add active class to clicked thumbnail
+            // Agregar la clase 'active' al thumbnail clickeado
             thumbnail.classList.add('active');
 
-            // Get data attributes
+            // Obtener los atributos data
             const fullImage = thumbnail.dataset.full;
             const title = thumbnail.dataset.title;
             const desc = thumbnail.dataset.desc;
 
-            // Animate the transition
+            // Animar la transición
             mainImage.style.opacity = '0';
             mainImage.style.transform = 'scale(0.98)';
 
             setTimeout(() => {
-                // Update the main image
+                // Actualizar la imagen principal
                 mainImage.src = fullImage;
                 mainImage.alt = title;
 
-                // Update title and description
+                // Actualizar el titulo y la descripción
                 if (mainTitle) mainTitle.textContent = title;
                 if (mainDesc) mainDesc.textContent = desc;
 
-                // Fade in
+
                 mainImage.style.opacity = '1';
                 mainImage.style.transform = 'scale(1)';
             }, 200);
         });
 
-        // Keyboard accessibility
-        thumbnail.addEventListener('keydown', (e) => {
+
+        thumbnail.addEventListener('keydoeswn', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
                 thumbnail.click();
@@ -128,7 +124,7 @@ function initGallery() {
         });
     });
 
-    // Add transition styles to main image
+    // Añadir estilos de transición a la imagen principal
     if (mainImage) {
         mainImage.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     }
@@ -146,50 +142,50 @@ function initVideoModal() {
 
     if (!modal || !openBtn) return;
 
-    // Open modal
+    // Abrir modal
     openBtn.addEventListener('click', () => {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
 
-        // Focus on close button for accessibility
+        // Focus en el botón de cerrar para accesibilidad 
         if (closeBtn) {
             setTimeout(() => closeBtn.focus(), 100);
         }
     });
 
-    // Close modal function
+    // Función para cerrar el modal
     function closeModal() {
         modal.classList.remove('active');
         document.body.style.overflow = '';
 
-        // Pause and reset video
+        // Pausar y resetear el video
         if (video) {
             video.pause();
             video.currentTime = 0;
         }
 
-        // Return focus to open button
+        // Devolver el enfoque al botón de abrir
         openBtn.focus();
     }
 
-    // Close button click
+    // Clic en el botón de cerrar
     if (closeBtn) {
         closeBtn.addEventListener('click', closeModal);
     }
 
-    // Overlay click
+    // Clic en el overlay
     if (overlay) {
         overlay.addEventListener('click', closeModal);
     }
 
-    // Escape key
+    //  Tecla escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
         }
     });
 
-    // Prevent closing when clicking on modal content
+    // Evitar que se cierre al hacer clic en el contenido del modal
     const modalContent = modal.querySelector('.modal-content');
     if (modalContent) {
         modalContent.addEventListener('click', (e) => {
@@ -202,7 +198,7 @@ function initVideoModal() {
    Scroll Effects
    ============================================ */
 function initScrollEffects() {
-    // Intersection Observer for fade-in animations
+    // Intersection Observer para animaciones de fade-in
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -218,7 +214,6 @@ function initScrollEffects() {
         });
     }, observerOptions);
 
-    // Observe section headers and content
     const animatedElements = document.querySelectorAll(
         '.section-header, .about-content, .gallery-container, .reel-container, .contact-content'
     );
@@ -230,7 +225,7 @@ function initScrollEffects() {
         observer.observe(el);
     });
 
-    // Add visible styles
+    // Añadir estilos visibles
     const style = document.createElement('style');
     style.textContent = `
         .visible {
@@ -240,7 +235,7 @@ function initScrollEffects() {
     `;
     document.head.appendChild(style);
 
-    // Parallax effect for hero (subtle)
+    // Efecto parallax para el hero (suave)
     const heroImg = document.querySelector('.hero-img');
     if (heroImg) {
         window.addEventListener('scroll', () => {
@@ -263,7 +258,7 @@ function initContactForm() {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // Get form data
+        // Obtener los datos del formulario
         const formData = new FormData(form);
         const data = {
             name: formData.get('name'),
@@ -271,7 +266,7 @@ function initContactForm() {
             message: formData.get('message')
         };
 
-        // Validate
+        // Validar
         if (!data.name || !data.email || !data.message) {
             showNotification('Por favor, completa todos los campos.', 'error');
             return;
@@ -282,7 +277,7 @@ function initContactForm() {
             return;
         }
 
-        // Simulate form submission
+        // Simular envío del formulario
         const submitBtn = form.querySelector('.btn-submit');
         const originalText = submitBtn.innerHTML;
 
@@ -290,7 +285,7 @@ function initContactForm() {
         submitBtn.disabled = true;
 
         setTimeout(() => {
-            // Success simulation
+            // Simulación de envío exitoso
             showNotification('¡Mensaje enviado! Te responderé pronto.', 'success');
             form.reset();
             submitBtn.innerHTML = originalText;
@@ -298,7 +293,7 @@ function initContactForm() {
         }, 1500);
     });
 
-    // Add input focus effects
+    // Añadir efectos de enfoque en los inputs
     const inputs = form.querySelectorAll('.form-input');
     inputs.forEach(input => {
         input.addEventListener('focus', () => {
@@ -310,15 +305,15 @@ function initContactForm() {
     });
 }
 
-// Helper: Email validation
+// Validación de email
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// Helper: Show notification
+// Mostrar notificación
 function showNotification(message, type = 'info') {
-    // Remove existing notifications
+    // Eliminar notificaciones existentes
     const existing = document.querySelector('.notification');
     if (existing) existing.remove();
 
@@ -330,7 +325,7 @@ function showNotification(message, type = 'info') {
         <button class="notification-close" aria-label="Cerrar">&times;</button>
     `;
 
-    // Add styles
+    // Añadir estilos
     notification.style.cssText = `
         position: fixed;
         bottom: 20px;
@@ -347,7 +342,7 @@ function showNotification(message, type = 'info') {
         backdrop-filter: blur(10px);
     `;
 
-    // Add animation keyframes
+    // Añadir animación keyframes
     if (!document.getElementById('notification-styles')) {
         const style = document.createElement('style');
         style.id = 'notification-styles';
@@ -370,12 +365,12 @@ function showNotification(message, type = 'info') {
 
     document.body.appendChild(notification);
 
-    // Close button
+    // Clic en el botón de cerrar
     notification.querySelector('.notification-close').addEventListener('click', () => {
         notification.remove();
     });
 
-    // Auto remove after 5 seconds
+    // Eliminar notificación después de 5 segundos
     setTimeout(() => {
         if (notification.parentElement) {
             notification.style.animation = 'slideIn 0.3s ease reverse';

@@ -1,31 +1,26 @@
-/* ============================================
-   MiArma Portfolio - Styles
-   Premium Sci-Fi Theme with Glassmorphism
-   ============================================ */
-
-/* CSS Variables - Design Tokens */
+/* CSS Variables*/
 :root {
     /* Colors */
     --color-bg-dark: #0a0a0f;
     --color-bg-darker: #050508;
     --color-surface: rgba(20, 20, 35, 0.8);
     --color-surface-light: rgba(40, 40, 70, 0.6);
-    
-    /* Accent Colors */
+
+
     --color-primary: #00f5ff;
     --color-secondary: #bf00ff;
     --color-accent: #ff006e;
     --color-gradient: linear-gradient(135deg, var(--color-primary), var(--color-secondary), var(--color-accent));
-    
+
     /* Text Colors */
     --color-text: #ffffff;
     --color-text-muted: rgba(255, 255, 255, 0.7);
     --color-text-subtle: rgba(255, 255, 255, 0.5);
-    
+
     /* Typography */
     --font-display: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
@@ -33,7 +28,7 @@
     --spacing-lg: 2rem;
     --spacing-xl: 3rem;
     --spacing-2xl: 5rem;
-    
+
     /* Effects */
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -41,7 +36,7 @@
     --transition-fast: 0.2s ease;
     --transition-normal: 0.3s ease;
     --transition-slow: 0.5s ease;
-    
+
     /* Border Radius */
     --radius-sm: 8px;
     --radius-md: 12px;
@@ -50,7 +45,9 @@
 }
 
 /* Reset & Base */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -217,19 +214,22 @@ body {
 }
 
 @keyframes heroZoom {
-    0% { transform: scale(1.1); }
-    100% { transform: scale(1.15); }
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        180deg,
-        rgba(10, 10, 15, 0.3) 0%,
-        rgba(10, 10, 15, 0.6) 50%,
-        rgba(10, 10, 15, 0.95) 100%
-    );
+    background: linear-gradient(180deg,
+            rgba(10, 10, 15, 0.3) 0%,
+            rgba(10, 10, 15, 0.6) 50%,
+            rgba(10, 10, 15, 0.95) 100%);
 }
 
 .hero-content {
@@ -249,6 +249,7 @@ body {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -344,47 +345,7 @@ body {
     outline: none;
 }
 
-/* Scroll Indicator */
-.hero-scroll {
-    position: absolute;
-    bottom: var(--spacing-lg);
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-xs);
-    color: var(--color-text-subtle);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
-.scroll-indicator {
-    width: 20px;
-    height: 30px;
-    border: 2px solid var(--color-text-subtle);
-    border-radius: 10px;
-    position: relative;
-}
-
-.scroll-indicator::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 8px;
-    background: var(--color-primary);
-    border-radius: 2px;
-    animation: scrollBounce 1.5s ease-in-out infinite;
-}
-
-@keyframes scrollBounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
-    50% { transform: translateX(-50%) translateY(10px); opacity: 0.5; }
-}
 
 /* ============================================
    Section Common Styles
@@ -425,119 +386,6 @@ section {
     margin: 0 auto;
 }
 
-/* ============================================
-   About Section
-   ============================================ */
-.about {
-    background: linear-gradient(180deg, var(--color-bg-dark) 0%, var(--color-bg-darker) 100%);
-}
-
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-xl);
-    align-items: center;
-}
-
-.about-image {
-    position: relative;
-}
-
-.about-image-frame {
-    position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    border: 1px solid var(--glass-border);
-}
-
-.about-image-frame::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--color-gradient);
-    opacity: 0.2;
-    z-index: 1;
-}
-
-.about-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform var(--transition-slow);
-}
-
-.about-image-frame:hover .about-img {
-    transform: scale(1.05);
-}
-
-.about-stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: var(--spacing-md);
-    padding: var(--spacing-md);
-    background: var(--glass-bg);
-    border-radius: var(--radius-md);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--glass-border);
-}
-
-.stat {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 700;
-    background: var(--color-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.stat-label {
-    font-size: 0.8rem;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.about-text {
-    padding-left: var(--spacing-lg);
-}
-
-.about-intro {
-    font-size: 1.3rem;
-    margin-bottom: var(--spacing-md);
-}
-
-.about-text p {
-    color: var(--color-text-muted);
-    margin-bottom: var(--spacing-sm);
-}
-
-.about-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    margin-top: var(--spacing-md);
-}
-
-.skill-tag {
-    padding: var(--spacing-xs) var(--spacing-sm);
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-sm);
-    font-size: 0.85rem;
-    color: var(--color-primary);
-    transition: all var(--transition-normal);
-}
-
-.skill-tag:hover {
-    background: rgba(0, 245, 255, 0.1);
-    border-color: var(--color-primary);
-}
 
 /* ============================================
    Gallery Section
@@ -1084,11 +932,11 @@ section {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
     }
-    
+
     .about-text {
         padding-left: 0;
     }
-    
+
     .contact-content {
         grid-template-columns: 1fr;
     }
@@ -1109,46 +957,46 @@ section {
         transition: right var(--transition-normal);
         border-left: 1px solid var(--glass-border);
     }
-    
+
     .nav-links.active {
         right: 0;
     }
-    
+
     .nav-toggle {
         display: flex;
         z-index: 1001;
     }
-    
+
     .nav-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-    
+
     .nav-toggle.active span:nth-child(2) {
         opacity: 0;
     }
-    
+
     .nav-toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-    
+
     .hero-content {
         padding: var(--spacing-lg);
     }
-    
+
     .about-stats {
         flex-direction: column;
         gap: var(--spacing-sm);
     }
-    
+
     .gallery-thumbnails {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .footer-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-links {
         justify-content: center;
     }
@@ -1158,16 +1006,16 @@ section {
     .hero-cta {
         flex-direction: column;
     }
-    
+
     .btn {
         width: 100%;
         justify-content: center;
     }
-    
+
     .gallery-thumbnails {
         grid-template-columns: 1fr;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: var(--spacing-lg);
